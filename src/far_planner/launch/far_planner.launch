@@ -13,6 +13,7 @@
         <remap from="/terrain_cloud" to="$(arg terrain_cloud_topic)"/>
         <remap from="/scan_cloud" to="$(arg scan_cloud_topic)"/>
         <remap from="/terrain_local_cloud" to="$(arg terrain_local_topic)"/>
+        <remap from="/way_point" to="far_planner/way_point"/>
     </node>
     <group unless="$(arg smb)">
         <node type="rviz" name="far_rviz" pkg="rviz" args="-d $(find far_planner)/rviz/$(arg config).rviz" respawn="true"/>
